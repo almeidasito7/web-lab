@@ -1,4 +1,4 @@
-# 🧿 Projeto: Ícones de Mídia Social com Hover
+# Projeto: Ícones de Mídia Social com Hover
 
 ## 📌 O que é o Projeto
 
@@ -26,12 +26,29 @@ Criar um componente visual elegante que:
 ## 🔍 Exemplos Visuais
 
 <p align="center">
-  <img src="/project-social-media-icons/examples/Social-Buttons-UI-Example.png " width="500" alt="Ícones padrão" />
+  <img src="./examples/Social-Buttons-UI-Example.png" width="300" alt="Ícones padrão" />
 </p>
 
 <p align="center">
-  <img src="/project-social-media-icons/examples/Social-Buttons-Facebook-Example.jpg" width="300" alt="Ícone com hover GitHub" />
+  <img src="./examples/Social-Buttons-Facebook-Example.jpg" width="200" alt="Ícone com hover Facebook" />
 </p>
+
+<p align="center">
+  <img src="./examples/Social-Buttons-Github-Example.jpg" width="200" alt="Ícone com hover GitHub" />
+</p>
+
+<p align="center">
+  <img src="./examples/Social-Buttons-Instagram-Example.jpg" width="200" alt="Ícone com hover Instagram" />
+</p>
+
+<p align="center">
+  <img src="./examples/Social-Buttons-LinkedIn-Example.jpg" width="200" alt="Ícone com hover LinkedIn" />
+</p>
+
+<p align="center">
+  <img src="./examples/Social-Buttons-X-Example.png" width="200" alt="Ícone com hover X" />
+</p>
+
 
 ---
 
@@ -39,7 +56,7 @@ Criar um componente visual elegante que:
 
 - **HTML5** – Estrutura dos elementos da página
 - **CSS3** – Estilização, animações e responsividade
-- **Font Awesome** ou **SVGs personalizados** – Ícones sociais
+- **Font Google** e **SVGs personalizados** – Ícones sociais
 - **Tooltip customizada em CSS**
 
 ---
@@ -62,14 +79,14 @@ Criar um componente visual elegante que:
 
 ## 📁 Estrutura dos Arquivos
 
-social-icons-hover/
+Project-Social-Media-Icons/
 ├── index.html
 ├── style.css
 ├── example/
-│ ├── icons-default.png
-│ └── icons-hover.png
+│ ├── Social-Buttons-Ui-Example.png
+│ └── Social-Buttons-Facebook.jpg
 ├── assets/
-│ └── icons/ (opcional)
+│ └── facebook.svg
 ├── README.md
 
 ---
