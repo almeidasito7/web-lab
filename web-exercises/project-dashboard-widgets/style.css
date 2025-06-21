@@ -1,0 +1,227 @@
+:root {
+  --primary: #a2d2ff;
+  --text: #042002;
+  --border: #d1d8e0;
+  --success: #2a9d8f;
+  --error: #c3585a;
+  --white: #ffffff;
+  --bg: #f0f8ff; /* novo fundo pastel */
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.dashboard-container {
+  padding: 2rem 4rem;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start; /* alinhamento à esquerda */
+}
+
+.indicator {
+  width: 250px; /* tamanho mais compacto */
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  background: var(--white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+.indicator--highlighted {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.indicator:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.indicator.selected {
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--text);
+}
+
+.indicator header h2 {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.indicator_body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.indicator_numbers {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trend {
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--success);
+}
+
+.trend--down {
+  color: var(--error);
+}
+
+.dragging {
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.dashboard-container {
+  margin-left: 260px; /* espaço da sidebar */
+  padding: 2rem 3rem;
+}
+
+/* Filtros */
+.filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filters select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+/* Gráficos */
+.charts {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.chart-card {
+  flex: 1 1 45%;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filters label {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.filters select {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.filters select:hover {
+  border-color: var(--primary);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: var(--white);
+  border-right: 1px solid var(--border);
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Tamanhos */
+.sidebar.expanded {
+  width: 240px;
+}
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .sidebar-title {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* Botão de toggle */
+#toggleSidebar {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Animação flutuante */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
