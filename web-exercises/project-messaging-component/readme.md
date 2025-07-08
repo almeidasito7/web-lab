@@ -6,9 +6,17 @@
 
 ## 🖼️ Referências Visuais
 
-| Modo Claro                         | Modo Escuro                         |
-|------------------------------------|-------------------------------------|
-| ![Modo Claro](/examples/light-mode.png "Modo Claro") | ![Modo Escuro](/examples/dark-mode.png "Modo Escuro") |
+### Modo Claro
+
+<p align="center">
+  <img src="examples/light-mode.png" alt="Componente com o Light-Mode" />
+</p>
+
+### Modo Escuro
+
+<p align="center">
+  <img src="examples/dark-mode.png" alt="Componente com o Dark-Mode" />
+</p>
 
 
 ---
