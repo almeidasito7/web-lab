@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Componente de Comentários</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="comment-section">
+
+    <!-- Header com botão de tema e botão “três pontinhos” -->
+    <div class="component-header">
+      <div class="header-buttons">
+        <button id="themeToggle" class="btn-icon theme-toggle" aria-label="Alternar para modo escuro">🌙</button>
+        <button id="moreOptions" class="btn-icon more-options" aria-label="Mais opções">⋮</button>
+      </div>
+    </div>
+
+    <!-- Form de envio -->
+    <form class="comment-form" id="commentForm">
+      <!-- Avatar do usuário atual -->
+      <div class="input-header">
+        <img
+          src="./images/boy-2.jpg"
+          alt="Seu avatar"
+          class="input-avatar"
+        />
+      </div>
+
+      <textarea
+        id="commentInput"
+        class="comment-input"
+        placeholder="Escreva um comentário..."
+        rows="3"
+        required
+      ></textarea>
+      <button type="submit" class="btn-submit">Comentar</button>
+    </form>
+
+    <!-- Lista de comentários -->
+    <ul class="comment-list" id="commentList">
+      <!-- === Comentários mockados === -->
+      <li class="comment-item">
+        <div class="comment-avatar">
+          <img
+            src="./images/woman-2.jpg"
+            alt="Avatar de Tara Taylor"
+          />
+        </div>
+        <div class="comment-content">
+          <div class="comment-header">
+            <span class="author">Tara Taylor</span>
+            <span class="timestamp">5 dias atrás</span>
+          </div>
+          <p class="comment-text">
+            Eu retorno das férias amanhã turma! 😎.
+          </p>
+        </div>
+        <button class="delete-btn" aria-label="Excluir comentário">🗑️</button>
+      </li>
+
+      <li class="comment-item">
+        <div class="comment-avatar">
+          <img
+            src="./images/woman-1.jpg"
+            alt="Avatar de Anna Smith"
+          />
+        </div>
+        <div class="comment-content">
+          <div class="comment-header">
+            <span class="author">Anna Smith</span>
+            <span class="timestamp">5 dias atrás</span>
+          </div>
+          <p class="comment-text">
+            Eu vou preparar o material de marketing para o novo produto. Podemos discutir os detalhes amanhã?
+          </p>
+        </div>
+        <button class="delete-btn" aria-label="Excluir comentário">🗑️</button>
+      </li>
+
+      <li class="comment-item">
+        <div class="comment-avatar">
+          <img
+            src="./images/boy-1.jpg"
+            alt="Avatar de Drew Parker"
+          />
+        </div>
+        <div class="comment-content">
+          <div class="comment-header">
+            <span class="author">Drew Parker</span>
+            <span class="timestamp">5 dias atrás</span>
+          </div>
+          <p class="comment-text">
+            Eu adoraria saber mais sobre esse novo material de marketing. 😊 Quais são os próximos passos?
+          </p>
+        </div>
+        <button class="delete-btn" aria-label="Excluir comentário">🗑️</button>
+      </li>
+      <!-- ======================== -->
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
